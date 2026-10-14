@@ -1,6 +1,4 @@
-MICA: A Multimodal AI-Based Clinical Decision Support and Automated Medical Reporting System
-
-MICA is an AI-powered clinical support platform designed to improve preliminary clinical assessment, medical information integration, and clinical documentation through multimodal data processing.
+This project is an AI-powered clinical support platform designed to improve preliminary clinical assessment, medical information integration, and clinical documentation through multimodal data processing.
 
 The system integrates Natural Language Processing (NLP), Automatic Speech Recognition (ASR), speaker diarization, Medical Computer Vision, and Image Processing to analyze heterogeneous clinical data, including patient-reported symptoms, medical conversation recordings, radiological images, and laboratory test results.
 
