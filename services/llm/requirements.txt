@@ -1,0 +1,7 @@
+# OWNER: LLM/leader. Pin exact versions after the first successful build.
+fastapi
+uvicorn
+httpx
+pytest
+openai
+rapidfuzz

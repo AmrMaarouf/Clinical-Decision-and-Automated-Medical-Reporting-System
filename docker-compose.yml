@@ -1,0 +1,83 @@
+# Run only what you need:   docker compose up api redis postgres
+# GPU services (asr, xray) and ollama are behind profiles, so a plain
+# `docker compose up` works on a machine without a GPU.
+# Naming a service explicitly starts it:   docker compose up asr
+name: mica
+
+x-common: &common
+  env_file: .env
+
+x-gpu: &gpu
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          count: 1
+          capabilities: [gpu]
+
+services:
+  redis:
+    image: redis:7
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?copy .env.example to .env and set POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    <<: *common
+    build: {context: ., dockerfile: services/api/Dockerfile}
+    ports: ["8000:8000"]
+    depends_on:
+      redis: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+
+  llm:
+    <<: *common
+    build: {context: ., dockerfile: services/llm/Dockerfile}
+    ports: ["8004:8000"]
+
+  labs:
+    <<: *common
+    build: {context: ., dockerfile: services/labs/Dockerfile}
+    ports: ["8002:8000"]
+
+  asr:
+    <<: *common
+    profiles: ["gpu"]
+    build: {context: ., dockerfile: services/asr/Dockerfile}
+    volumes: [hf_models:/models]
+    ports: ["8001:8000"]
+    deploy: *gpu
+
+  xray:
+    <<: *common
+    profiles: ["gpu"]
+    build: {context: ., dockerfile: services/xray/Dockerfile}
+    volumes: [hf_models:/models]
+    ports: ["8003:8000"]
+    deploy: *gpu
+
+  ollama:
+    profiles: ["local-llm"]
+    image: ollama/ollama
+    volumes: [ollama:/root/.ollama]
+    ports: ["11434:11434"]
+    deploy: *gpu   # no GPU? delete this line and Ollama runs on CPU (slow)
+
+volumes:
+  hf_models:
+  pgdata:
+  ollama:

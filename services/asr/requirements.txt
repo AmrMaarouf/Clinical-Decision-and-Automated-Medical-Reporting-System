@@ -1,0 +1,8 @@
+# OWNER: audio. Base image already has torch: do NOT list torch/torchaudio here.
+# Pin exact versions after the first successful build.
+fastapi
+uvicorn
+httpx
+pytest
+# add: faster-whisper, pyannote.audio, soundfile, jiwer, librosa ...
+# After install run `pip list | grep -i torch` and make sure torch was not replaced.

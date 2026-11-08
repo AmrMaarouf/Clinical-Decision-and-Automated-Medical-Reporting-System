@@ -1,0 +1,6 @@
+# OWNER: backend. Pin exact versions after the first successful build.
+fastapi
+uvicorn
+httpx
+pytest
+# add: sqlalchemy, psycopg[binary], redis, celery or rq, python-jose, python-multipart ...

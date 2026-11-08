@@ -1,0 +1,21 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service: [api, asr, labs, xray, llm]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -f services/${{ matrix.service }}/Dockerfile -t mica-${{ matrix.service }}:ci .
+      - name: Run tests inside the image
+        run: docker run --rm mica-${{ matrix.service }}:ci python -m pytest -q
+      # Pushing images to Docker Hub on main is the backend owner's job
+      # (needs DOCKERHUB_USERNAME / DOCKERHUB_TOKEN repository secrets).

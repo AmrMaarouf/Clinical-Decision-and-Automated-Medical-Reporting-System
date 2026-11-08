@@ -1,0 +1,7 @@
+# OWNER: x-ray. Base image already has torch: do NOT list torch/torchvision here.
+# Pin exact versions after the first successful build.
+fastapi
+uvicorn
+httpx
+pytest
+# add: torchxrayvision, grad-cam, pydicom, opencv-python-headless, scikit-learn ...

@@ -1,0 +1,7 @@
+# OWNER: DIP. Pin exact versions after the first successful build.
+fastapi
+uvicorn
+httpx
+pytest
+# add: opencv-python-headless (NOT opencv-python), pytesseract, easyocr or paddleocr,
+#      pymupdf, rapidfuzz, numpy ...
