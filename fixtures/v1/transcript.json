@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "case_id": "demo001",
+  "language": "ar-EG",
+  "duration_s": 42.0,
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "speaker": "SPEAKER_00",
+      "role": "doctor",
+      "text": "أهلاً بحضرتك، إيه اللي تعبك؟",
+      "confidence": 0.95
+    },
+    {
+      "id": 1,
+      "start": 4.5,
+      "end": 9.0,
+      "speaker": "SPEAKER_01",
+      "role": "patient",
+      "text": "عندي وجع في صدري من يومين.",
+      "confidence": 0.93
+    },
+    {
+      "id": 2,
+      "start": 9.5,
+      "end": 12.0,
+      "speaker": "SPEAKER_00",
+      "role": "doctor",
+      "text": "عندك سخونية أو كحة؟",
+      "confidence": 0.95
+    },
+    {
+      "id": 3,
+      "start": 12.5,
+      "end": 17.0,
+      "speaker": "SPEAKER_01",
+      "role": "patient",
+      "text": "مفيش سخونية بس عندي شوية كحة.",
+      "confidence": 0.92
+    },
+    {
+      "id": 4,
+      "start": 17.5,
+      "end": 21.0,
+      "speaker": "SPEAKER_00",
+      "role": "doctor",
+      "text": "وبتشتكي من أمراض مزمنة؟",
+      "confidence": 0.94
+    },
+    {
+      "id": 5,
+      "start": 21.5,
+      "end": 25.0,
+      "speaker": "SPEAKER_01",
+      "role": "patient",
+      "text": "عندي ضغط عالي من سنتين.",
+      "confidence": 0.94
+    },
+    {
+      "id": 6,
+      "start": 25.5,
+      "end": 28.0,
+      "speaker": "SPEAKER_00",
+      "role": "doctor",
+      "text": "وبتاخد أدوية؟",
+      "confidence": 0.96
+    },
+    {
+      "id": 7,
+      "start": 28.5,
+      "end": 33.0,
+      "speaker": "SPEAKER_01",
+      "role": "patient",
+      "text": "باخد كونكور كل يوم الصبح.",
+      "confidence": 0.9
+    }
+  ],
+  "role_method": "synthetic-fixture"
+}

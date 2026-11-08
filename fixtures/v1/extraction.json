@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "case_id": "demo001",
+  "chief_complaint": {
+    "value": "وجع في الصدر",
+    "evidence": "عندي وجع في صدري من يومين",
+    "segment_id": 1
+  },
+  "symptoms": [
+    {
+      "name": "chest pain",
+      "name_ar": "وجع في الصدر",
+      "present": true,
+      "duration": "يومين",
+      "severity": null,
+      "onset": null,
+      "evidence": "عندي وجع في صدري من يومين",
+      "segment_id": 1
+    },
+    {
+      "name": "cough",
+      "name_ar": "كحة",
+      "present": true,
+      "duration": null,
+      "severity": null,
+      "onset": null,
+      "evidence": "عندي شوية كحة",
+      "segment_id": 3
+    }
+  ],
+  "denied_symptoms": [
+    {
+      "name": "fever",
+      "name_ar": "سخونية",
+      "evidence": "مفيش سخونية",
+      "segment_id": 3
+    }
+  ],
+  "past_history": [
+    {
+      "value": "hypertension",
+      "duration": "سنتين",
+      "evidence": "عندي ضغط عالي من سنتين",
+      "segment_id": 5
+    }
+  ],
+  "medications": [
+    {
+      "name": "كونكور",
+      "dose": null,
+      "frequency": "كل يوم الصبح",
+      "evidence": "باخد كونكور كل يوم الصبح",
+      "segment_id": 7
+    }
+  ],
+  "allergies": [],
+  "family_history": [],
+  "social_history": [],
+  "not_mentioned": [
+    "severity",
+    "allergies",
+    "family_history",
+    "social_history"
+  ],
+  "dropped": [],
+  "meta": null
+}
