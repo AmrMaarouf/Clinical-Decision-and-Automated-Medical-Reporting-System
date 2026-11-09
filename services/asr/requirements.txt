@@ -1,8 +1,11 @@
-# OWNER: audio. Base image already has torch: do NOT list torch/torchaudio here.
-# Pin exact versions after the first successful build.
-fastapi
-uvicorn
-httpx
+# OWNER: audio. Base image has torch: do NOT list torch/torchaudio/numpy here.
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+httpx==0.28.1
+python-multipart
 pytest
-# add: faster-whisper, pyannote.audio, soundfile, jiwer, librosa ...
-# After install run `pip list | grep -i torch` and make sure torch was not replaced.
+faster-whisper
+pyannote.audio
+soundfile
+jiwer
+librosa

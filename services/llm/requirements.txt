@@ -1,7 +1,7 @@
-# OWNER: LLM/leader. Pin exact versions after the first successful build.
-fastapi
-uvicorn
-httpx
+# OWNER: LLM/leader. Unpinned lines: pin after the first successful build.
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+httpx==0.28.1
 pytest
 openai
 rapidfuzz
