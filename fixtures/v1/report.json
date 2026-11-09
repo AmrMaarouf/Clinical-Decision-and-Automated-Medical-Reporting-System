@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "case_id": "demo001",
+  "language": "ar",
+  "status": "draft",
+  "sections": {
+    "chief_complaint": {
+      "text": "وجع في الصدر منذ يومين.",
+      "sources": [
+        "extraction.chief_complaint"
+      ],
+      "generated_by": "code",
+      "requires_review": false
+    },
+    "hpi": {
+      "text": "المريض يشكو من وجع في الصدر منذ يومين، مع وجود كحة، وينفي وجود سخونية.",
+      "sources": [
+        "seg:1",
+        "seg:3"
+      ],
+      "generated_by": "llm",
+      "requires_review": false
+    },
+    "past_history": {
+      "text": "ارتفاع ضغط الدم منذ سنتين. الأدوية: كونكور (كل يوم الصبح). الحساسية: غير مذكور في الجلسة.",
+      "sources": [
+        "extraction.past_history",
+        "extraction.medications"
+      ],
+      "generated_by": "code",
+      "requires_review": false
+    },
+    "examination": {
+      "text": "غير مذكور في الجلسة",
+      "sources": [],
+      "generated_by": "code",
+      "requires_review": false
+    },
+    "investigations": {
+      "text": "الهيموجلوبين: 10.2 g/dL (منخفض). عدد الكرات البيضاء: 7.1 x10^3/uL (طبيعي). الصفائح: 250 x10^3/uL (طبيعي). الأشعة: نتيجة آلية مساعدة تشير إلى التهاب رئوي باحتمال 0.81، وليست تشخيصاً ومحتاجة مراجعة أخصائي أشعة.",
+      "sources": [
+        "labs",
+        "xray"
+      ],
+      "generated_by": "code",
+      "requires_review": false
+    },
+    "assessment": {
+      "text": "مقترح للمراجعة: وجع في الصدر منذ يومين مع كحة، ونتائج التحاليل والأشعة الآلية المرفقة تحتاج تقييم الدكتور.",
+      "sources": [
+        "extraction.symptoms",
+        "labs",
+        "xray"
+      ],
+      "generated_by": "llm",
+      "requires_review": true
+    },
+    "plan": {
+      "text": "غير مذكور في الجلسة",
+      "sources": [],
+      "generated_by": "code",
+      "requires_review": false
+    }
+  },
+  "unsupported_claims": [],
+  "meta": null
+}

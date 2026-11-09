@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "case_id": "demo001",
+  "source_file": "synthetic_cbc_001.png",
+  "lab_name": null,
+  "report_date": null,
+  "tests": [
+    {
+      "name_raw": "Hemoglobin",
+      "name_std": "HGB",
+      "value": 10.2,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "flag": "low",
+      "ref_source": "printed",
+      "ocr_confidence": 0.93,
+      "needs_review": false,
+      "bbox": [
+        120,
+        340,
+        560,
+        372
+      ]
+    },
+    {
+      "name_raw": "WBC",
+      "name_std": "WBC",
+      "value": 7.1,
+      "unit": "x10^3/uL",
+      "ref_low": 4.0,
+      "ref_high": 11.0,
+      "flag": "normal",
+      "ref_source": "printed",
+      "ocr_confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        120,
+        380,
+        560,
+        412
+      ]
+    },
+    {
+      "name_raw": "Platelets",
+      "name_std": "PLT",
+      "value": 250.0,
+      "unit": "x10^3/uL",
+      "ref_low": 150.0,
+      "ref_high": 400.0,
+      "flag": "normal",
+      "ref_source": "printed",
+      "ocr_confidence": 0.91,
+      "needs_review": false,
+      "bbox": [
+        120,
+        420,
+        560,
+        452
+      ]
+    }
+  ],
+  "warnings": []
+}

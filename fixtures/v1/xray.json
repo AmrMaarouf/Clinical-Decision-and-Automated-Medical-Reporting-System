@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "case_id": "demo001",
+  "image_file": "cxr_placeholder.png",
+  "view": "PA",
+  "model": {
+    "name": "placeholder",
+    "version": "0"
+  },
+  "prediction": {
+    "label": "pneumonia",
+    "probability": 0.81
+  },
+  "probabilities": {
+    "normal": 0.19,
+    "pneumonia": 0.81
+  },
+  "gradcam_file": "cxr_placeholder_gradcam.png",
+  "disclaimer": "ملاحظة مساعدة آلية، مش تشخيص، ومحتاجة مراجعة أخصائي أشعة.",
+  "quality_warnings": []
+}
