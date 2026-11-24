@@ -24,6 +24,7 @@ RUN pip install /schemas
 # 3) service code and tests
 COPY services/api/src /app/src
 COPY services/api/tests /app/tests
+COPY fixtures /app/fixtures
 
 # non-root user; /models is pre-created so the named volume inherits its ownership
 RUN mkdir -p /models \
