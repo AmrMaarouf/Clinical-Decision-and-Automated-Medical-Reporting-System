@@ -10,7 +10,7 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from .grounding import verify
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 MAX_RETRIES = 2 
 
 
@@ -46,8 +46,8 @@ and "segment_id": the number in brackets of the segment that contains it.
 7. Keep "duration" as said ("يومين"). If nothing is mentioned for a field, return [] (or null \
 for chief_complaint).
 8. Do not diagnose and do not suggest treatment.
-9. "evidence" must be the SHORTEST verbatim span that supports that single item, \
-not the whole sentence. Never include a negated or unrelated part in the evidence.
+9. "evidence" must be a verbatim span from the segment that supports the item AND includes the details you recorded for it (for example its duration, frequency or dose). Keep it as short as possible, but never cut those details off. Never include a negated or unrelated part.
+10. "chief_complaint.value" and every "name_ar" must stay in Arabic exactly as the speaker said it. A medication "name" must be exactly as the speaker said it. Do not translate or standardize brand names.
 """
 
 
